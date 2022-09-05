@@ -10,6 +10,11 @@ body {
 	color: #454545;
 }
 
+a {
+	text-decoration: none;
+	color: #454545;
+}
+
 .container {
 	margin: 0 auto;
 	padding: 0 15px;
@@ -33,7 +38,7 @@ nav {
 	max-width: 320px;
 }
 
-header nav ol {
+header nav ol.navigation {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -50,14 +55,62 @@ header nav ol {
 	margin: 0;
 }
 
-.nav-link a {
-	text-decoration: none;
-	color: #454545;
+.dropdown-trigger {
+	position: relative;
+}
+
+.dropdown {
+	padding: 20px;
+	border: 1px solid #454545;
+	position: absolute;
+	top: 60px;
+	left: -125px;
+	width: 300px;
+	background-color: #fff;
+	border-radius: 4px;
+}
+
+.dropdown ol {
+	list-style: none;
+	display: flex;
+	flex-flow: wrap row;
+	margin: 0;
+	padding: 0;
+	justify-content: flex-start;
+}
+
+.dropdown ol li {
+	width: calc(33.33% - 16px);
+	margin: 8px;
+	margin-bottom: 10px;
+}
+
+.dropdown ol li a {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 16px;
+}
+
+.dropdown ol li img {
+	width: 30px;
+	margin-bottom: 10px;
 }
 
 @media (min-width: 600px) {
 	header {
 		flex-flow: wrap row;
 		justify-content: space-between;
+	}
+
+	.logo {
+		margin-bottom: 0;
+	}
+
+	.dropdown {
+		padding: 40px;
+		left: -216px;
+		width: 400px;
 	}
 }
