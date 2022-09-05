@@ -13,7 +13,18 @@ body {
 a {
 	text-decoration: none;
 	color: #454545;
+	transition: all 0.3s ease-in-out;
 }
+
+a:hover {
+	opacity: 0.8;
+	transition: all 0.3s ease-in-out;
+}
+
+a:focus {
+	background-color: #00800017;
+}
+
 
 .container {
 	margin: 0 auto;
@@ -31,6 +42,11 @@ header {
 
 .logo {
 	margin-bottom: 36px;
+	display: block;
+}
+
+.logo:focus {
+	background-color: transparent;
 }
 
 nav {
@@ -53,6 +69,11 @@ header nav ol.navigation {
 
 .nav-link:last-child,.nav-link:first-child {
 	margin: 0;
+}
+
+.nav-link > a {
+	padding: 10px;
+	display: block;
 }
 
 .dropdown-trigger {
@@ -91,11 +112,30 @@ header nav ol.navigation {
 	flex-direction: column;
 	align-items: center;
 	font-size: 16px;
+	padding: 10px;
 }
 
 .dropdown ol li img {
 	width: 30px;
 	margin-bottom: 10px;
+}
+
+.more {
+	display: flex;
+	align-items: center;
+	margin: 20px auto;
+	border: 0;
+	background-color: transparent;
+	font-size: 16px;
+	padding: 10px 30px;
+	border: 1px solid;
+	border-radius: 20px;
+	color: #454545;
+}
+
+.more img {
+	width: 30px;
+	margin-right: 10px;
 }
 
 @media (min-width: 600px) {
