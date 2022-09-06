@@ -89,6 +89,7 @@ header nav ol.navigation {
 	width: 300px;
 	background-color: #fff;
 	border-radius: 4px;
+	visibility: hidden;
 }
 
 .dropdown ol {
@@ -123,6 +124,8 @@ header nav ol.navigation {
 .more {
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	width: 200px;
 	margin: 20px auto;
 	border: 0;
 	background-color: transparent;
@@ -137,6 +140,34 @@ header nav ol.navigation {
 	width: 30px;
 	margin-right: 10px;
 }
+
+.more-list {
+	visibility: hidden;
+	height: 0;
+}
+
+
+/*************** Dropdowns with checkboxes ***************/
+
+input[type=checkbox].checkbox-hidden {
+  display: none;
+}
+
+.label {
+	display: block;
+	cursor: pointer;
+}
+
+#dropdown-trigger:checked ~ .dropdown {
+	visibility: visible;
+}
+
+#morelink:checked ~ .more-list {
+	visibility: visible;
+	height: unset;
+}
+
+
 
 @media (min-width: 600px) {
 	header {

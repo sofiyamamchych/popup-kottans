@@ -18,8 +18,8 @@
 		        <li class="nav-link"><a href="#"><img src="img/mail.svg" alt="Mail"></a></li>
 		        <li class="nav-link"><a href="#"><img src="img/images.svg" alt="Images"></a></li>
 		        <li class="nav-link dropdown-trigger">
-		        	
-		        		<img src="img/menu.svg" alt="Menu">
+		        		<input class="checkbox-hidden" type="checkbox" id="dropdown-trigger" name="dropdown-trigger">
+		        		<label class="label" for="dropdown-trigger"><img src="img/menu.svg" alt="Menu"></label>
 		        		<div class="dropdown">
 		        			<ol>
 		        				<li><a href="#"><img src="img/tg.svg"><span>Telegram</span></a></li>
@@ -35,8 +35,9 @@
 		        				<li><a href="#"><img src="img/messenger.svg"><span>Messenger</span></a></li>
 		        				<li><a href="#"><img src="img/spotify.svg"><span>Spotify</span></a></li>
 		        			</ol>
-		        			<button class="more"><img src="img/eye.svg">View more</button>
-		        			<ol>
+		        			<input type="checkbox" class="checkbox-hidden" id="morelink" name="morelink">
+		        			<label for="morelink" class="label"><a class="more"><img src="img/eye.svg">View more</a></label>
+		        			<ol class="more-list">
 		        				<li><a href="#"><img src="img/curious.svg"><span>Curious</span></a></li>
 		        				<li><a href="#"><img src="img/kiss.svg"><span>Kiss</span></a></li>
 		        				<li><a href="#"><img src="img/angry.svg"><span>Angry</span></a></li>
