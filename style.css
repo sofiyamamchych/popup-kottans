@@ -48,8 +48,9 @@ header {
 	display: block;
 }
 
-.logo:focus {
-	background-color: transparent;
+.logo:hover {
+	transform: scale(1.05);
+	transition: all 0.2s ease-in-out;
 }
 
 nav {
@@ -79,18 +80,37 @@ header nav ol.navigation {
 
 .nav-link > a {
 	padding: 10px;
-	display: block;
+	display: flex;
+	border-radius: 20px;
+	box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
+        			inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link > a:hover, .dropdown-trigger:hover {
+	box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-trigger {
 	position: relative;
+	border-radius: 20px;
+	border-radius: 20px;
+	box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
+        			inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-trigger .label.main img {
+	width: 38px;
+	padding: 10px;
+	box-sizing: content-box;
+	position: relative;
+	top: 2px;
 }
 
 .dropdown {
 	padding: 20px;
 	border: 1px solid #454545;
 	position: absolute;
-	top: 60px;
+	top: 75px;
 	left: -125px;
 	width: 300px;
 	background-color: #fff;
@@ -120,6 +140,10 @@ header nav ol.navigation {
 	align-items: center;
 	font-size: 16px;
 	padding: 10px;
+}
+
+.dropdown ol li a:hover {
+	background-color: #FFEF00;
 }
 
 .dropdown ol li img {
@@ -169,6 +193,7 @@ input[type=checkbox].checkbox-hidden {
 
 .label {
 	display: block;
+	cursor: pointer;
 }
 
 #dropdown-trigger:checked ~ .dropdown {
@@ -179,6 +204,12 @@ input[type=checkbox].checkbox-hidden {
 	visibility: visible;
 	height: unset;
 	margin-top: 20px;
+	position: relative;
+	z-index: 10;
+}
+
+#morelink:hover ~ label {
+	background-color: #FFEF00;
 }
 
 /**********************************************************/
