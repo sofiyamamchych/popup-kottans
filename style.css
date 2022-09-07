@@ -21,10 +21,6 @@ a:hover {
 	transition: all 0.3s ease-in-out;
 }
 
-a:focus, input:focus {
-	box-shadow: inset 0px 0px 3px 5px #FFEF00 !important;
-}
-
 .relative {
 	position: relative;
 }
@@ -116,6 +112,12 @@ header nav ol.navigation {
 	background-color: #fff;
 	border-radius: 4px;
 	display: none;
+	height: 550px;
+	overflow-y: scroll;
+}
+
+.dropdown::-webkit-scrollbar {
+  visibility: hidden;
 }
 
 .dropdown ol {
