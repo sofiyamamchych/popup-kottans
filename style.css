@@ -22,7 +22,7 @@ a:hover {
 }
 
 a:focus, input:focus {
-	box-shadow: inset 0px 0px 3px 5px #FFEF00;
+	box-shadow: inset 0px 0px 3px 5px #FFEF00 !important;
 }
 
 .relative {
@@ -115,7 +115,7 @@ header nav ol.navigation {
 	width: 300px;
 	background-color: #fff;
 	border-radius: 4px;
-	visibility: hidden;
+	display: none;
 }
 
 .dropdown ol {
@@ -175,9 +175,8 @@ header nav ol.navigation {
 	margin-bottom: 20px;	
 }
 
-.more-list {
-	visibility: hidden;
-	height: 0;
+.dropdown ol.more-list {
+	display: none;
 }
 
 /*************** Dropdowns with checkboxes ****************/
@@ -197,12 +196,11 @@ input[type=checkbox].checkbox-hidden {
 }
 
 #dropdown-trigger:checked ~ .dropdown {
-	visibility: visible;
+	display: block;
 }
 
 #morelink:checked ~ .more-list {
-	visibility: visible;
-	height: unset;
+	display: flex;
 	margin-top: 20px;
 	position: relative;
 	z-index: 10;
